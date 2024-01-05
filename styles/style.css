@@ -12,3 +12,22 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
+.header {
+  padding: 0 20px;
+  position: relative;
+}
+
+@media (width < 768px) and (width >=375px) {
+  .header {
+    padding: 0 10px;
+  }
+}
+
+.header__rec {
+  position: absolute;
+  color: var(--rec-color);
+  text-transform: uppercase;
+  top: 21px;
+  right: 49px;
+}
+
