@@ -6,7 +6,7 @@
   background: var(--background-image) no-repeat top center,
     var(--background-color);
   background-size: auto 768px;
-  
+  background-attachment: fixed;
   color: var(--main-text-color);
   transition-duration: var(--transition-duration);
   font-family: "IBM Plex Mono";
@@ -108,6 +108,7 @@
 
 .header__theme-menu-button_active {
   border: 1px solid;
+  pointer-events: none;
 }
 
 @media (width < 1024px) and (width >= 768px) {
