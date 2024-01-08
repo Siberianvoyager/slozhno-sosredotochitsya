@@ -9,12 +9,14 @@
   background-attachment: fixed;
   color: var(--main-text-color);
   transition-duration: var(--transition-duration);
+  font-family: "IBM Plex Mono";
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
 .header {
   padding: 0 20px;
   position: relative;
+  
 }
 
 @media (width < 768px) and (width >=375px) {
@@ -88,6 +90,7 @@
   background: none;
   transition-duration: var(--transition-duration);
   cursor: pointer;
+  text-transform: lowercase;
 }
 
 .header__theme-menu-button:hover {
@@ -187,6 +190,7 @@
   display: flex;
   flex-direction: column;
   gap: 80px;
+  font-family: "IBM Plex Mono";
 }
 
 @media (width < 768px) and (width >= 375px) {
