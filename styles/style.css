@@ -16,7 +16,7 @@
 .header {
   padding: 0 20px;
   position: relative;
-  
+  height: 100vh;
 }
 
 @media (width < 768px) and (width >=375px) {
@@ -203,6 +203,8 @@
 
 .section {
   line-height: 130%;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .section__title {
