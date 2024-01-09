@@ -1,15 +1,14 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  --transition-duration: 0.25s;
 
-  background: var(--background-image) no-repeat top center,
-    var(--background-color);
-  background-size: auto 768px;
-  background-attachment: fixed;
+  background-color: var(--background-color);
   color: var(--main-text-color);
-  transition-duration: var(--transition-duration);
   font-family: "IBM Plex Mono";
+  background-attachment: fixed;
+  background-image: var(--background-image);
+  background-position: center;
+  background-size: cover;
 
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
