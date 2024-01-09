@@ -457,7 +457,7 @@
 
 @media (width < 768px) and (width >= 375px) {
   .footer {
-    margin-top: 30px;
+    margin-top: 40px;
     padding: 262px 10px;
   }
 }
