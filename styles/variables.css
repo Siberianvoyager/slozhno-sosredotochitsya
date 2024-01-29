@@ -10,7 +10,7 @@
 */
 
 :root {
-  --font-family: "IBM Plex mono";
+  --font-family: "IBM Plex mono", monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,7 +18,9 @@
     --main-text-color: #f1b2ce;
     --title-color: #db00ff;
     --title-shadow: #ff0070;
-    --hover-color: 1px solid rgba(255, 0, 112, 0.4);
+    --hover-color: rgba(255, 0, 112, 0.4);
+    --hover-width: 1px;
+    --hover-style: solid;
     --background-color: #000028;
     --background-image: url(../images/cover-image-dark.png);
     --article-title-color: var(--background-color);
@@ -44,7 +46,7 @@
     --section-title-color: var(--main-text-color);
     --border-color: var(--title-shadow);
     --corners-color: var(--main-text-color);
-    --link-shadow: var(--title-color);
+    --link-shadow: var(--title-decor);
     --rec-color: var(--background-color);
   }
 }

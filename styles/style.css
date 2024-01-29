@@ -16,7 +16,7 @@
 .header {
   padding: 0 20px;
   position: relative;
-  height: 100vh;
+  block-size: 100vh;
 }
 
 @media (width < 768px) and (width >=375px) {
@@ -45,7 +45,8 @@
   position: absolute;
   width: 10px;
   height: 10px;
-  margin: -5px -20px 0 0;
+  margin-block-start: -5px;
+  margin-inline-end: -20px;
   border-radius: 50%;
   box-shadow: 0 0 4px 2px var(--rec-color);
   background-color: var(--rec-color);
@@ -81,6 +82,7 @@
 
 
 .header__theme-menu-button {
+  appearance: none;
   font-size: 18px;
   font-weight: 400;
   color: var(--corners-color);
@@ -88,13 +90,12 @@
   padding: 2.5px 12px;
   border: transparent;
   background: none;
-  transition-duration: var(--transition-duration);
   cursor: pointer;
   text-transform: lowercase;
 }
 
 .header__theme-menu-button:hover {
-  border: var(--hover-color);
+  border: var(--hover-width) var(--hover-style) var(--corners-color);
 }
 
 .header__theme-menu-button:focus {
@@ -102,11 +103,11 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--corners-color);
+  border: var(--hover-width) var(--hover-style) var(--corners-color);
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid;
+  border: 1px solid transparent;
   pointer-events: none;
 }
 
@@ -127,6 +128,7 @@
   font-weight: 700;
   margin-left: -2%;
   color: var(--title-color);
+  line-height: 0.825;
   text-shadow: 4px 4px 0px var(--title-shadow);
 }
 
@@ -167,7 +169,7 @@
   .header__title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     margin-left: 0;
-    line-height: 82.5%;
+    
   }
 }
 
@@ -176,12 +178,13 @@
   align-self: flex-end;
   font-weight: 700;
   width: 50%;
+  font-size: 18px;
+  line-height: 1.3;
 }
 
 @media (width < 425px) {
   .header__subtitle {
     width: 100%;
-    font-size: 18px;
   }
 }
 
@@ -266,8 +269,9 @@
 
 .section__article-text-link {
   border: transparent;
-  text-shadow: 3px 3px 0px var(--link-shadow);
-  transition-duration: var(--transition-duration);
+  text-shadow: 1.5px 1.5px 0px var(--link-shadow);
+  text-decoration: none;
+  
 }
 
 .section__article-text-link:hover {
@@ -377,8 +381,7 @@
   margin: 0;
 }
 
-@media (width >= 768px) {
-  .section:last-of-type .section__image {
+.section__image {
     -o-object-fit: cover;
     object-fit: cover;
     -o-object-position: center;
