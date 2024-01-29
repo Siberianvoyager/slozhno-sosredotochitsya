@@ -17,6 +17,7 @@
   padding: 0 20px;
   position: relative;
   block-size: 100vh;
+  min-height: 668px;
 }
 
 @media (width < 768px) and (width >=375px) {
@@ -38,6 +39,46 @@
     top: 11px;
     right: 39px;
   }
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid var(--corners-color);
+  border-bottom: 1px solid var(--corners-color);
+  left: 20px;
+  bottom: 20px;
+}
+
+@media (width < 768px) and (width >= 375px) {
+  .decorated-zone::before {
+    left: 10px;
+    bottom: 10px;
+  }
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-right: 1px solid var(--corners-color);
+  border-top: 1px solid var(--corners-color);
+  right: 20px;
+  top: 20px;
+}
+
+@media (width < 768px) and (width >= 375px) {
+  .decorated-zone::after {
+    right: 10px;
+    top: 10px;
+  }
+}
+
+.title-decor {
+  background: var(--title-decor);
 }
 
 .header__rec::after {
@@ -95,19 +136,21 @@
 }
 
 .header__theme-menu-button:hover {
-  border: var(--hover-width) var(--hover-style) var(--corners-color);
+  border: 1px solid var(--hover-color);
 }
 
 .header__theme-menu-button:focus {
   border: none;
+  text-decoration: underline;
+  color: var(--corners-color);
 }
 
 .header__theme-menu-button:focus-visible {
-  border: var(--hover-width) var(--hover-style) var(--corners-color);
+  border: 1px solid var(--corners-color);
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid transparent;
+  border: 1px solid var(--hover-color);
   pointer-events: none;
 }
 
@@ -195,7 +238,6 @@
   display: flex;
   flex-direction: column;
   gap: 80px;
-  font-family: "IBM Plex Mono";
 }
 
 @media (width < 768px) and (width >= 375px) {
@@ -399,7 +441,6 @@
   .section:last-of-type .section__image:nth-of-type(3) {
     grid-row: span 2;
   }
-}
 
 @media (width < 768px) {
   .section:last-of-type .section__image {
@@ -431,6 +472,8 @@
   padding: 282px 20px;
   position: relative;
   text-align: center;
+  height: 100vh;
+  min-height: 668px;
 }
 
 .footer__title {

@@ -16,14 +16,15 @@
   --section-title-color: var(--main-text-color);
   --border-color: var(--title-shadow);
   --corners-color: var(--main-text-color);
-  --link-shadow: var(--title-color);
+  --link-shadow: var(--title-decor);
   --rec-color: var(--background-color);
-  /* сохраните этот селектор в приведённом виде.
+  /*
+  сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
 }
 
-.page.theme_light .header__rec {
+.theme_light .header__rec {
   display: none;
 }
