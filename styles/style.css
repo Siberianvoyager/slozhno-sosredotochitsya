@@ -141,9 +141,7 @@
 }
 
 .header__theme-menu-button:focus {
-  border: none;
-  text-decoration: underline;
-  color: var(--corners-color);
+  outline: none;
 }
 
 .header__theme-menu-button:focus-visible {

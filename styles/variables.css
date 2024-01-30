@@ -10,7 +10,7 @@
 */
 
 :root {
-  --font-family: "IBM Plex mono", Arial, monospace;
+  --font-family: "IBM Plex mono", Inconsolata, monospace;
   --main-text-color: #f1b2ce;
   --title-color: #db00ff;
   --title-shadow: #ff0070;
